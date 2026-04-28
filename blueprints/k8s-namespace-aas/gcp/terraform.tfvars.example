@@ -21,6 +21,10 @@ dns_private_zone_name = "gcp-naas.aviatrixdemo.local"
 
 k8s_cluster_suffix = "shared-gke"
 
+# Set after applying clusters/shared/ — use the 'cluster_id' output
+# Format: https://container.googleapis.com/v1/projects/{project}/locations/{region}/clusters/{name}
+# k8s_cluster_id = "https://container.googleapis.com/v1/projects/my-project/locations/us-central1/clusters/naas-abc1-shared-gke"
+
 geo_block_countries = ["CN", "RU", "KP", "IR"]
 
 approved_web_domains = [

@@ -17,6 +17,10 @@ private_dns_zone_name = "aws-naas.aviatrixdemo.local"
 
 k8s_cluster_suffix = "shared-eks"
 
+# Set after applying clusters/shared/ — use the 'cluster_arn' output
+# Format: arn:aws:eks:{region}:{account}:cluster/{name}
+# k8s_cluster_id = "arn:aws:eks:us-east-1:123456789012:cluster/naas-abc1-shared-eks"
+
 geo_block_countries = ["CN", "RU", "KP", "IR"]
 
 approved_web_domains = [

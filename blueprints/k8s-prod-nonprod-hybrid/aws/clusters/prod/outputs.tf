@@ -4,7 +4,7 @@
 
 output "cluster_name" {
   description = "EKS production cluster name"
-  value       = module.eks_prod.cluster_name
+  value       = module.eks_prod.cluster_arn
 }
 
 output "cluster_endpoint" {
@@ -43,8 +43,8 @@ output "node_security_group_id" {
 }
 
 output "cluster_id" {
-  description = "Cluster ID for Aviatrix SmartGroup k8s_cluster_id"
-  value       = module.eks_prod.cluster_name
+  description = "EKS cluster ARN for Aviatrix SmartGroup k8s_cluster_id and kubernetes_cluster onboarding"
+  value       = module.eks_prod.cluster_arn
 }
 
 output "cluster_arn" {
