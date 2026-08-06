@@ -52,7 +52,7 @@ resource "aviatrix_smart_group" "team_a_ns" {
   selector {
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-a"
     }
   }
@@ -63,7 +63,7 @@ resource "aviatrix_smart_group" "team_b_ns" {
   selector {
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-b"
     }
   }
@@ -74,7 +74,7 @@ resource "aviatrix_smart_group" "team_c_ns" {
   selector {
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-c"
     }
   }
@@ -85,7 +85,7 @@ resource "aviatrix_smart_group" "monitoring_ns" {
   selector {
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "monitoring"
     }
   }
@@ -96,17 +96,17 @@ resource "aviatrix_smart_group" "all_namespaces" {
   selector {
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-a"
     }
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-b"
     }
     match_expressions {
       type           = "k8s"
-      k8s_cluster_id = local.k8s_cluster_name
+      k8s_cluster_id = var.k8s_cluster_id
       k8s_namespace  = "team-c"
     }
   }

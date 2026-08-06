@@ -146,3 +146,9 @@ variable "controller_password" {
   sensitive   = true
   default     = null
 }
+
+variable "k8s_cluster_id" {
+  description = "GKE cluster self-link for Aviatrix DCF SmartGroup k8s_cluster_id. Get from clusters/shared/ output 'cluster_id' after applying that layer. Format: https://container.googleapis.com/v1/projects/{project}/locations/{location}/clusters/{name}"
+  type        = string
+  default     = ""
+}

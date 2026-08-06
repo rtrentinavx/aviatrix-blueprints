@@ -134,3 +134,9 @@ variable "controller_password" {
   sensitive   = true
   default     = null
 }
+
+variable "k8s_cluster_id" {
+  description = "AKS cluster resource ID for Aviatrix DCF SmartGroup k8s_cluster_id. Get from clusters/shared/ output 'cluster_id' after applying that layer. Format: /subscriptions/{sub}/resourcegroups/{rg}/providers/Microsoft.ContainerService/managedClusters/{name}"
+  type        = string
+  default     = ""
+}

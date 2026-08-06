@@ -18,6 +18,10 @@ private_dns_zone_name = "azure-naas.aviatrixdemo.local"
 
 k8s_cluster_suffix = "shared-aks"
 
+# Set after applying clusters/shared/ — use the 'cluster_id' output
+# Format: /subscriptions/{sub}/resourcegroups/{rg}/providers/Microsoft.ContainerService/managedClusters/{name}
+# k8s_cluster_id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/naas-rg/providers/Microsoft.ContainerService/managedClusters/naas-abc1-shared-aks"
+
 geo_block_countries = ["CN", "RU", "KP", "IR"]
 
 approved_web_domains = [

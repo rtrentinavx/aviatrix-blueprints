@@ -133,3 +133,9 @@ variable "controller_password" {
   sensitive   = true
   default     = null
 }
+
+variable "k8s_cluster_id" {
+  description = "EKS cluster ARN for Aviatrix DCF SmartGroup k8s_cluster_id. Get from clusters/shared/ output 'cluster_arn' after applying that layer. Format: arn:aws:eks:{region}:{account}:cluster/{name}"
+  type        = string
+  default     = ""
+}
